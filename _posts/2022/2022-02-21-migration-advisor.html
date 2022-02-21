@@ -1,0 +1,55 @@
+---
+layout: post
+author: Charlie Sale
+title: "MigrationAdvisor: Recommending Library Migrations from Large-Scale Open-Source Data"
+date: 2022-02-21
+categories: ["Maintainance", "Development Process"]
+---
+<div class="review">
+  <p>
+    In the spirit of <i>not</i> reinventing the wheel, most software projects
+    rely on third party libraries to provide functionality critical to the project.
+    Sometimes, these dependencies are abandoned by their maintainers, which makes
+    them unsuitable for future use. In this event, the developer is forced to switch
+    to a new library that has similar functionality. This task is difficult as
+    there are often multiple options to choose from, and there are no metrics to
+    evaluate how good of a replacement a project is.
+
+    Enter <cite>He2021</cite>'s tool <a href="http://migration-helper.net/#/"><b>MigrationAdvisor</b></a>.
+    This website aids in the library migration decision-making process. It uses
+    data mined from open source software projects to suggest replacements for
+    Java libraries. The metrics measure things like frequently added/removed libraries,
+    libraries that were explicitly stated to be a mirgration, changes to library
+    calls, and commit topology.
+
+    <b>MigrationAdvisor</b> is evaluated on its correctness and its helpfulness.
+    Its correctness is measured using Mean Reciprocal Rank (a common metric for
+    evaluating retrieval and ranking problems). The tool outperforms the existing
+    tools for library migration by scoring an MRR of 0.8566. Additionally,
+    <b>MigrationAdvisor</b>'s helpfulness is evaluated by peer professional
+    developers who all say that the tool is overall useful in the library migration
+    process.
+  </p>
+
+  <p id="He2021" class="bib">
+    <cite>He2021</cite>
+    Hao He and Yulin Xu and Xiao Cheng and Guangtai Liang and Minghui Zhou:
+    "<a href="https://doi.org/10.1109/icse-companion52605.2021.00023"><i>MigrationAdvisor</i>: Recommending Library Migrations from Large-Scale Open-Source Data</a>".
+    <em>2021 {IEEE}/{ACM} 43rd International Conference on Software Engineering: Companion Proceedings ({ICSE}-Companion)</em>,
+    <a class="doi" href="https://doi.org/10.1109/icse-companion52605.2021.00023">10.1109/icse-companion52605.2021.00023</a>.
+  </p>
+  <blockquote class="abstract">
+    During software maintenance, developers may need
+    to migrate an already in-use library to another library with
+    similar functionalities. However, it is difficult to make the
+    optimal migration decision with limited information, knowledge,
+    or expertise. In this paper, we present MIGRATIONADVISOR,
+    an evidence-based tool to recommend library migration targets
+    through intelligent analysis upon a large number of GitHub
+    repositories and Java libraries. The migration advisories are provided through a search engine style web service where developers
+    can seek migration suggestions for a specific library. We conduct
+    systematic evaluations on the correctness of results, and evaluate
+    the usefulness of the tool by collecting usage feedback from
+    industry developers
+  </blockquote>
+</div>
